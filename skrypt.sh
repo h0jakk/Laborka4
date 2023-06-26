@@ -3,6 +3,13 @@ case $1 in
         echo $(date)
     shift
     ;;
+    --help)
+        echo "--help żeby wyświetlić help"
+        echo "--logs żeby utworzyć 100 plików"
+        echo "--logs 30 żeby utworzyć 30 plików"
+        echo "--date żeby wyświetlić datę"
+    shift
+    ;;
     --logs)
     if [ $# -eq 2 ]
     then
@@ -21,7 +28,7 @@ case $1 in
     shift
     ;;
     *)
-        echo "Zly parametr"
+        echo "Podany został zły parametr"
     shift
     ;;
 esac
